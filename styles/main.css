@@ -40,13 +40,13 @@ header {
   height: 400px;
   background-image: url('../images/team.jpg');
   background-size: cover;
-  /* background-position: center; */
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   opacity: .1;
+  z-index: -2;
 }
 
 .project {
@@ -57,10 +57,20 @@ header {
 
 .project-img-contain {
   max-width: 60%;
+  height: 300px
+}
+
+.project-2 {
+  display: none;
+}
+
+.project-3 {
+  display: none;
 }
 
 .project-img {
   width: 100%;
+  height: 100%;
   border-radius: 10%;
   border: 1px #000 solid;
 }
