@@ -14,6 +14,8 @@ function init() {
     'devicon-postgresql-plain'
   ]
 
+  const getSkillsDiv = document.querySelector('.get-skills')
+  const skillsRespDiv = document.querySelector('.skills-response')
   const skillsDiv = document.querySelector('.skills-list')
   const prevBtn = document.querySelector('.prev')
   const nextBtn = document.querySelector('.next')
@@ -42,11 +44,38 @@ function init() {
 
   prevBtn.addEventListener('click', scrollProject)
   nextBtn.addEventListener('click', scrollProject)
-  
-  // for header, use JS to add text after animation completes
 
+  const inViewPort = (element) => {
+    const elementRect = getSkillsDiv.getBoundingClientRect(element)
+    return (
+      elementRect.top >= 0 &&
+      elementRect.left >= 0 &&
+      elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      elementRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  }
 
+  const getSkillsAnimate = () => {
+    getSkillsDiv.classList.add('skills-out')
+  }
 
+  const skillsRespAnimate = () => {
+    skillsRespDiv.classList.add('skills-in')
+    skillsRespDiv.classList.add('display-flex')
+  }
+
+  const skillsAnimate = () => {
+    setTimeout(getSkillsAnimate)
+    setTimeout(skillsRespAnimate, 2000)
+  }
+
+  const handleSkillsAnimate = (e) => {
+    if (inViewPort(e.target)) {
+      skillsAnimate()
+    }
+  }
+
+  window.addEventListener('scroll', handleSkillsAnimate)
 }
 
 window.addEventListener('DOMContentLoaded', init)

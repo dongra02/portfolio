@@ -79,15 +79,13 @@ header {
   width: 30%;
   margin: 0 auto;
   text-align: center;
-  animation: get-skills 4s ease-out;
 }
 
-.skills-response, h1.response {
-  display: flex;
-  justify-content: space-evenly;
+.skills-response {
+  display: none;
+  flex-direction: column;
   max-width: 80vw;
   margin: 0 auto;
-  animation: skills-in 3s;
 }
 
 .skills-list {
@@ -96,9 +94,26 @@ header {
   align-items: center;
 }
 
+.response-status {
+  margin: 5 auto;
+  text-align: center;
+}
+
 i, .response {
   color: black;
   font-size: 40px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.skills-out {
+  animation: get-skills 4s ease-out;
+}
+
+.skills-in {
+  animation: skills-in 3s;
 }
 
 /* Animations */
