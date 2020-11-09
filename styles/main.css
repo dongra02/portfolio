@@ -75,23 +75,31 @@ header {
   border: 1px #000 solid;
 }
 
-.get-skills{
-  width: 30%;
-  margin: 0 auto;
-  text-align: center;
+.skills-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-skills {
+  display: flex;
+  justify-content: center;
 }
 
 .skills-response {
+  display: flex;
+}
+
+.response-contain {
   display: none;
-  flex-direction: column;
-  max-width: 80vw;
-  margin: 0 auto;
 }
 
 .skills-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 80vw;
 }
 
 .response-status {
@@ -99,13 +107,21 @@ header {
   text-align: center;
 }
 
-i, .response {
+i {
   color: black;
   font-size: 40px;
 }
 
 .display-flex {
   display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
 
 .skills-out {
@@ -129,29 +145,14 @@ i, .response {
 
 @keyframes skills-in {
   0% {
-    margin-left: 100%;
-    width: 200%;
+    margin-left: 300%;
   }
 
-  75% {
+  50% {
+    margin-left: 200%;
+  }
+
+  100% {
     margin-left: 0%;
-    width: 100%;
-  }
-
-  100% {
-    margin-left: 10%;
-    width: 80vw;
-  }
-}
-
-@keyframes get-skills {
-  0% {
-    margin-left: auto;
-    width: 30%;
-  }
-
-  100% {
-    margin-left: 100%;
-    width: 400%;
   }
 }

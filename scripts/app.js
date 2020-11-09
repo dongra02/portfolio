@@ -15,8 +15,9 @@ function init() {
   ]
 
   const getSkillsDiv = document.querySelector('.get-skills')
-  const skillsRespDiv = document.querySelector('.skills-response')
+  const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
+  const respItems = document.querySelectorAll('.response')
   const prevBtn = document.querySelector('.prev')
   const nextBtn = document.querySelector('.next')
   const projOne = document.querySelector('.project-1')
@@ -55,18 +56,21 @@ function init() {
     )
   }
 
-  const getSkillsAnimate = () => {
-    getSkillsDiv.classList.add('skills-out')
+  const skillsRespAnimate = () => {
+    responseContain.classList.add('skills-in')
+    responseContain.classList.add('display-block')
   }
 
-  const skillsRespAnimate = () => {
-    skillsRespDiv.classList.add('skills-in')
-    skillsRespDiv.classList.add('display-flex')
+  const hideResponse = () => {
+    respItems.forEach(item => {
+      item.classList.add('display-none')
+    })
   }
 
   const skillsAnimate = () => {
-    setTimeout(getSkillsAnimate)
-    setTimeout(skillsRespAnimate, 2000)
+    setTimeout(() => getSkillsDiv.classList.add('display-none'), 1000)
+    setTimeout(skillsRespAnimate, 1000)
+    setTimeout(hideResponse, 4200)
   }
 
   const handleSkillsAnimate = (e) => {
