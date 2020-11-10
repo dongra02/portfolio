@@ -24,6 +24,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
 header a {
@@ -66,7 +67,7 @@ header a {
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -114,7 +115,7 @@ header a {
 }
 
 .skills-container {
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
