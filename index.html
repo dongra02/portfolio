@@ -9,35 +9,58 @@
   <title>Don Graham</title>
 </head>
 <body>
-    <header class='header'><h5>This will be my header with contact links</h5></header>
+    <header class='header'>
+      <h1>Don Graham</h1>
+      <div>
+        <a href='#'>Email</a>
+        <a href='#'>LinkedIn</a>
+        <a href='#'>Github</a>
+      </div>
+    </header>
   <section class='main-container'>
     <div class='bio-container'>
+      <div class='bio-img-contain'>
+        <img class='bio-img' src='./images/dg.jpg' />
+      </div>
       <div class='bio-content'>
-        <h3>This will be bio content</h3>
+        <h3>About Me</h3>
         <p>I am a nonprofit and education operations professional turned junior software developer.
           Having witnessed the challenges and opportunities a strong tech foundation can present for an organization; I was driven to pursue software development.
-          I would be lying if I did not admit to a selfish motive – I really enjoy it. 
-          What started as a passion for CRMs and Excel evolved into Python scripts before I finally had to accept it – I wanted to code.
-          <br/>
-          <br/>
+          <br/><br/>
           An international relocation to Beirut, Lebanon provided me an opportunity to dive full-time into learning the basics, and ultimately to completing the Software Engineering Immersive course offered by General Assembly.
           In addition to starting a foundation of skills to build on, the program offered me opportunities to collaborate using a variety of industry tools.
+          <br/><br/>
           Today, my goal is to join an organization where I can contribute while greedily learning from those building and maintaining the technology that connects the programming to the community.
           </p>
       </div>
-      <div class='bio-img-contain'>
-        <img class='bio-img' src='./images/dg.jpg' />
+    </div>
+    <div class='skills-container'>
+      <div class='get-skills'>
+          <p>axios.get('don-graham/developer/skills')</p>
+      </div>
+      <div class='response-contain'>
+        <div class='skills-response'>
+            <p class='response'>{</p><p class='response'>'skills': </p><div class='skills-list'></div><p class='response'>}</p>
+        </div>
       </div>
     </div>
     <div class='project-container'>
       <h2>Projects & Collaborations</h2>
+      <div class='btn-group'>
+        <button class='prev'>Previous</button>
+        <button class='next'>Next</button>
+      </div>
       <div class="project project-1">
         <div class='project-content'>
-          <h3>Project 1</h3>
-          <p>This will be a description of the project. Text should fill the space fairly well.</p>
+          <h3>Don't Get Poo on Your Shoe</h3>
+          <p>
+            A silly take on Minesweeper, this browser game was built using HTML, CSS and JavaScript.
+          </p>
+          <a href='#' class='proj-link' target='_blank'>Code</a>
+          <a href='#' class='proj-link' target='_blank'>Live Game</a>
         </div>
         <div class='project-img-contain'>
-          <img class='project-img' src='./images/landing.jpg'/>
+          <img class='project-img' src='./images/poo.jpg'/>
         </div>
       </div>
       <div class="project project-2">
@@ -58,25 +81,19 @@
           <img class='project-img' src='./images/erd.jpg'/>
         </div>
       </div>
-      <div class='btn-group'>
-        <button class='prev'>Previous</button>
-        <button class='next'>Next</button>
-      </div>
-    </div>
-    <div class='skills-container'>
-      <div class='get-skills'>
-          <p>axios.get('don-graham/developer/skills')</p>
-      </div>
-      <div class='response-contain'>
-        <div class='skills-response'>
-            <p class='response'>{</p><p class='response'>'skills': </p><div class='skills-list'></div><p class='response'>}</p>
+      <div class="project project-4">
+        <div class='project-content'>
+          <h3>Project 4</h3>
+          <p>This will be a description of the project. Text should fill the space fairly well.</p>
+        </div>
+        <div class='project-img-contain'>
+          <img class='project-img' src='./images/erd.jpg'/>
         </div>
       </div>
     </div>
   </section>
   <footer>
-    <p>background image:<span><a href="https://unsplash.com/@marvelous?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marvin Meyer</a> on <a href="https://unsplash.com/s/photos/group-work?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-    <p>Timeline</p>
+    <p>include a footer</p>
   </footer>
 </body>
 </html>

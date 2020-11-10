@@ -23,7 +23,8 @@ function init() {
   const projOne = document.querySelector('.project-1')
   const projTwo = document.querySelector('.project-2')
   const projThree = document.querySelector('.project-3')
-  const projArray = [projOne, projTwo, projThree]
+  const projFour = document.querySelector('.project-4')
+  const projArray = [projOne, projTwo, projThree, projFour]
 
   let currProjInd = 0
 
@@ -36,9 +37,9 @@ function init() {
   const scrollProject = (e) => {
     projArray[currProjInd].style.display = 'none'
     if (e.target.innerHTML === 'Next') {
-      currProjInd = currProjInd === 2 ? 0 : currProjInd + 1
+      currProjInd = currProjInd === 3 ? 0 : currProjInd + 1
     } else {
-      currProjInd = currProjInd === 0 ? 2 : currProjInd - 1
+      currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
     }
     projArray[currProjInd].style.display = 'flex'
   }
