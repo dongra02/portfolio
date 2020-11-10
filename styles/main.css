@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  color: darkgreen;
 }
 
 header {
@@ -20,10 +21,29 @@ header {
 .bio-container {
   min-height: 400px;
   display: flex;
-  max-width: 800px;
-  margin: 0 auto;
-  justify-content: space-around;
+  max-width: 1000px;
+  margin: 80px auto 40px;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.bio-content {
+  max-width: 45%;
+  line-height: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 10%;
+}
+
+.bio-img-contain {
+  max-width: 60%;
+  height: 400px;
+}
+
+.bio-img {
+  height: 100%;
+  border-radius: 10%;
 }
 
 .project-container {
@@ -33,20 +53,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.project-container::before {
-  content: '';
-  height: 400px;
-  background-image: url('../images/team.jpg');
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: .1;
-  z-index: -2;
 }
 
 .project {
@@ -73,6 +79,13 @@ header {
   height: 100%;
   border-radius: 10%;
   border: 1px #000 solid;
+}
+
+.btn-group {
+  display: flex;
+  margin: 10px auto;
+  width: 20%;
+  justify-content: space-evenly;
 }
 
 .skills-container {
