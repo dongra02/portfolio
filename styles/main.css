@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -74,7 +75,7 @@ header a {
 .project {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 75vw;
 }
 
@@ -83,12 +84,15 @@ header a {
 }
 
 .project-content {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 40%;
   text-align: center;
 }
 
 .project-img-contain {
-  max-width: 60%;
+  max-width: 50%;
   height: 300px
 }
 
@@ -96,6 +100,7 @@ header a {
   height: 100%;
   border-radius: 10%;
   border: 1px #000 solid;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
 .project a {

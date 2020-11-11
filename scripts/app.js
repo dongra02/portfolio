@@ -36,7 +36,7 @@ function init() {
 
   const scrollProject = (e) => {
     projArray[currProjInd].style.display = 'none'
-    if (e.target.innerHTML === 'Next') {
+    if (e.target.value === 'next') {
       currProjInd = currProjInd === 3 ? 0 : currProjInd + 1
     } else {
       currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
