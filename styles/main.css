@@ -5,12 +5,11 @@
 
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   text-decoration: none;
-  padding: 2px 20px;
-  border-radius: 50%;
 }
 
 header {
@@ -29,8 +28,7 @@ header {
 }
 
 header a {
-  background-color: #fff;
-  color: #000000;
+  color: #fff;
   margin: 0 10px;
 }
 
@@ -38,19 +36,19 @@ header a {
   min-height: 400px;
   display: flex;
   max-width: 1000px;
-  margin: 80px auto 40px;
+  margin: 80px auto 20px;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 10%;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
 .bio-content {
   max-width: 45%;
   line-height: 1.2rem;
   text-align: center;
-  padding: 10px;
-  background-color: #f3f3f3;
-  border-radius: 10%;
-  box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
 .bio-img-contain {
@@ -65,18 +63,41 @@ header a {
 }
 
 .project-container {
+  position: relative;
   min-height: 500px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin: 10px auto;
+
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 10%;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
+
+/* .project-container::before {
+  content: '';
+  min-height: 500px;
+  background-image: url('../images/team.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .1;
+  z-index: -2;
+} */
 
 .project {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   max-width: 75vw;
+  
 }
 
 .project-container h2 {
@@ -84,26 +105,38 @@ header a {
 }
 
 .project-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   width: 40%;
   text-align: center;
+  padding: 10px;
 }
 
 .project-img-contain {
-  max-width: 50%;
-  height: 300px
+  width: 40%;
+  height: 300px;
+  text-align: center;
 }
 
 .project-img {
   height: 100%;
+  width: 100%;
   border-radius: 10%;
-  border: 1px #000 solid;
+  /* border: 1px #000 solid; */
   box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
-.project a {
+.proj-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.proj-link {
+  width: 25%;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10%;
+}
+
+.proj-link:hover {
   background-color: #000;
   color: #FFF;
 }
@@ -179,7 +212,7 @@ i {
 }
 
 footer {
-  height: 40px;
+  height: 20px;
   background-color: #000;
   color: #FFF;
   text-align: center;
