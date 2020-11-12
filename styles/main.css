@@ -196,6 +196,14 @@ header a {
 .get-skills {
   display: flex;
   justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0000FF;
+}
+
+.skill-link {
+  color: #008000;
 }
 
 .skills-response {
@@ -241,12 +249,13 @@ i {
   display: none;
 }
 
-.skills-out {
-  animation: get-skills 4s ease-out;
-}
-
 .skills-in {
   animation: skills-in 3s ease-out;
+}
+
+.skills-out {
+  transition: font-size 2s;
+  font-size: 30px;
 }
 
 footer {
@@ -259,7 +268,7 @@ footer {
 /* Animations */
 @keyframes header-down {
   0% {
-    height: 0%;
+    height: 0px;
   }
 
   100% {
@@ -269,7 +278,7 @@ footer {
 
 @keyframes skills-in {
   0% {
-    margin-left: 300%;
+    margin-left: 220%;
   }
 
   50% {

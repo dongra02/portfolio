@@ -108,9 +108,10 @@ function init() {
   }
 
   const skillsAnimate = () => {
-    setTimeout(() => getSkillsDiv.classList.add('display-none'), 1000)
-    setTimeout(skillsRespAnimate, 1000)
-    setTimeout(hideResponse, 4200)
+    getSkillsDiv.classList.add('skills-out')
+    setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
+    setTimeout(skillsRespAnimate, 2000)
+    setTimeout(hideResponse, 5500)
   }
 
   const handleSkillsAnimate = (e) => {
