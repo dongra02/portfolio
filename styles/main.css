@@ -135,7 +135,6 @@ header a {
   height: 100%;
   width: 100%;
   border-radius: 10%;
-  /* border: 1px #000 solid; */
   box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
@@ -168,11 +167,31 @@ header a {
 }
 
 .skills-container {
+  position: relative;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px auto;
+  width: 1000px;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
+  overflow: hidden;
 }
+
+/* .skills-container::before {
+  content: 'SKILLS';
+  position: absolute;
+  font-size: 80px;
+  color: darkgreen;
+  line-height: 1.4em;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .1;
+  z-index: -3;
+} */
 
 .get-skills {
   display: flex;
@@ -227,7 +246,7 @@ i {
 }
 
 .skills-in {
-  animation: skills-in 3s;
+  animation: skills-in 3s ease-out;
 }
 
 footer {

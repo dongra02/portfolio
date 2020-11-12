@@ -41,6 +41,15 @@ function init() {
 
   const allIcons = document.querySelectorAll('i')
 
+  const highlightSkill = (skillsList) => {
+    skillsList.forEach(skill => {
+      const element = document.querySelector(skill)
+      element.classList.add('green-back')
+    })
+  }
+
+  highlightSkill(projOneSkills)
+
   let currProjInd = 0
 
   const scrollProject = (e) => {
@@ -59,32 +68,19 @@ function init() {
 
     switch (currProjInd) {
       case 0:
-        projOneSkills.forEach(skill => {
-          const element = document.querySelector(skill)
-          element.classList.add('green-back')
-        })
+        highlightSkill(projOneSkills)
         break
       case 1:
-        projTwoSkills.forEach(skill => {
-          const element = document.querySelector(skill)
-          element.classList.add('green-back')
-        })
+        highlightSkill(projTwoSkills)
         break
       case 2:
-        projThreeSkills.forEach(skill => {
-          const element = document.querySelector(skill)
-          element.classList.add('green-back')
-        })
+        highlightSkill(projThreeSkills)
         break
       case 3:
-        projFourSkills.forEach(skill => {
-          const element = document.querySelector(skill)
-          element.classList.add('green-back')
-        })
+        highlightSkill(projFourSkills)
         break
       default:
         console.log('Houston we have a problem')
-
     }
   }
 
