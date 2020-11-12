@@ -1,7 +1,7 @@
 function init() {
   console.log('Thanks for checking my Portfolio!')
   
-  // get icns for git, github
+  // get icns for git, github, node sass, bulma
   const icons = [
     'devicon-html5-plain',
     'devicon-css3-plain',
@@ -16,7 +16,10 @@ function init() {
     'devicon-postgresql-plain'
   ]
 
-  const projOneSkills = ['.html5', '.javascript', '.css3']
+  const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql']
+  const projTwoSkills = ['.html5', '.javascript', '.css3', '.react', '.express', '.nodejs', '.npm', '.mongodb']
+  const projThreeSkills = ['.html5', '.javascript', '.css3', '.react']
+  const projFourSkills = ['.html5', '.javascript', '.css3']
 
   const getSkillsDiv = document.querySelector('.get-skills')
   const responseContain = document.querySelector('.response-contain')
@@ -55,12 +58,33 @@ function init() {
     projArray[currProjInd].style.display = 'flex'
 
     switch (currProjInd) {
-      case 3:
+      case 0:
         projOneSkills.forEach(skill => {
-          console.log(skill)
           const element = document.querySelector(skill)
           element.classList.add('green-back')
         })
+        break
+      case 1:
+        projTwoSkills.forEach(skill => {
+          const element = document.querySelector(skill)
+          element.classList.add('green-back')
+        })
+        break
+      case 2:
+        projThreeSkills.forEach(skill => {
+          const element = document.querySelector(skill)
+          element.classList.add('green-back')
+        })
+        break
+      case 3:
+        projFourSkills.forEach(skill => {
+          const element = document.querySelector(skill)
+          element.classList.add('green-back')
+        })
+        break
+      default:
+        console.log('Houston we have a problem')
+
     }
   }
 
