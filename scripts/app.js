@@ -1,5 +1,7 @@
 function init() {
   console.log('Thanks for checking my Portfolio!')
+  
+  // get icns for git, github
   const icons = [
     'devicon-html5-plain',
     'devicon-css3-plain',
@@ -14,38 +16,55 @@ function init() {
     'devicon-postgresql-plain'
   ]
 
+  const projOneSkills = ['.html5', '.javascript', '.css3']
+
   const getSkillsDiv = document.querySelector('.get-skills')
   const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
   const respItems = document.querySelectorAll('.response')
-  const prevBtn = document.querySelector('.prev')
-  const nextBtn = document.querySelector('.next')
+  const scrollBtns = document.querySelectorAll('.project-scroll')
   const projOne = document.querySelector('.project-1')
   const projTwo = document.querySelector('.project-2')
   const projThree = document.querySelector('.project-3')
   const projFour = document.querySelector('.project-4')
   const projArray = [projOne, projTwo, projThree, projFour]
 
-  let currProjInd = 0
-
   icons.forEach(icon => {
     const iconElement = document.createElement('i')
     iconElement.classList.add(icon)
+    iconElement.classList.add(icon.split('-')[1])
     skillsDiv.appendChild(iconElement)
   })
 
+  const allIcons = document.querySelectorAll('i')
+
+  let currProjInd = 0
+
   const scrollProject = (e) => {
     projArray[currProjInd].style.display = 'none'
+    allIcons.forEach(icon => {
+      if (icon.classList.contains('green-back')) {
+        icon.classList.remove('green-back')
+      }
+    })
     if (e.target.value === 'next') {
       currProjInd = currProjInd === 3 ? 0 : currProjInd + 1
     } else {
       currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
     }
     projArray[currProjInd].style.display = 'flex'
+
+    switch (currProjInd) {
+      case 3:
+        projOneSkills.forEach(skill => {
+          console.log(skill)
+          const element = document.querySelector(skill)
+          element.classList.add('green-back')
+        })
+    }
   }
 
-  prevBtn.addEventListener('click', scrollProject)
-  nextBtn.addEventListener('click', scrollProject)
+  scrollBtns.forEach(button => button.addEventListener('click', scrollProject))
 
   const inViewPort = (element) => {
     const elementRect = getSkillsDiv.getBoundingClientRect(element)
