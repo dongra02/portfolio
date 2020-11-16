@@ -47,7 +47,8 @@ header a {
 .bio-container::before {
   content: 'BIO';
   font-size: 300px;
-  color: darkgreen;
+  color: green;
+  background-color: lightgreen;
   line-height: 2em;
   min-height: 400px;
   text-align: center;
@@ -56,7 +57,7 @@ header a {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: .1;
+  opacity: .2;
   z-index: -2;
 }
 
@@ -94,6 +95,7 @@ header a {
   position: absolute;
   font-size: 180px;
   color: darkgreen;
+  background-color: lightgreen;
   line-height: 2.7em;
   min-height: 400px;
   text-align: center;
@@ -103,7 +105,7 @@ header a {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: .1;
+  opacity: .2;
   z-index: -3;
 }
 
@@ -178,20 +180,17 @@ header a {
   overflow: hidden;
 }
 
-/* .skills-container::before {
-  content: 'SKILLS';
+.skills-container::before {
+  content: '';
   position: absolute;
-  font-size: 80px;
-  color: darkgreen;
-  line-height: 1.4em;
-  text-align: center;
+  background-color: lightgreen;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: .1;
+  opacity: .2;
   z-index: -3;
-} */
+}
 
 .get-skills {
   display: flex;
@@ -256,6 +255,17 @@ i {
 .skills-out {
   transition: font-size 2s;
   font-size: 30px;
+}
+
+.skills-hi {
+  transition: font-size 1s;
+  font-size: 70px;
+  box-shadow: 9px 12px 23px 0px #5b5b5b;
+}
+
+.skills-off {
+  transition: font-size 1s;
+  font-size: 40px;
 }
 
 footer {

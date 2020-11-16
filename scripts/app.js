@@ -44,19 +44,23 @@ function init() {
   const highlightSkill = (skillsList) => {
     skillsList.forEach(skill => {
       const element = document.querySelector(skill)
-      element.classList.add('green-back')
+      element.classList.add('skills-hi')
+      if (element.classList.contains('skills-off')) {
+        element.classList.remove('skills-off')
+      }
     })
   }
 
-  highlightSkill(projOneSkills)
+  
 
   let currProjInd = 0
 
   const scrollProject = (e) => {
     projArray[currProjInd].style.display = 'none'
     allIcons.forEach(icon => {
-      if (icon.classList.contains('green-back')) {
-        icon.classList.remove('green-back')
+      if (icon.classList.contains('skills-hi')) {
+        icon.classList.add('skills-off')
+        icon.classList.remove('skills-hi')
       }
     })
     if (e.target.value === 'next') {
@@ -112,6 +116,7 @@ function init() {
     setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
     setTimeout(skillsRespAnimate, 2000)
     setTimeout(hideResponse, 5500)
+    // setTimeout(highlightSkill(projOneSkills), 7000)
   }
 
   const handleSkillsAnimate = (e) => {
