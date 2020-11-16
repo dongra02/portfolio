@@ -31,12 +31,24 @@ header a {
   margin: 0 10px;
 }
 
+header a:hover {
+  transition: font-size 1s;
+  font-size: 18px;
+  color: gray;
+}
+
+header a:not(:hover) {
+  transition: font-size 1s;
+  font-size: 16px;
+}
+
 .bio-container {
   position: relative;
   min-height: 400px;
   display: flex;
   max-width: 1000px;
   margin: 80px auto 20px;
+  border-radius: 2%;
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
@@ -48,6 +60,7 @@ header a {
   font-size: 300px;
   color: green;
   background-color: lightgreen;
+  border-radius: 2%;
   line-height: 2em;
   min-height: 400px;
   text-align: center;
@@ -81,6 +94,7 @@ header a {
   position: relative;
   min-height: 500px;
   max-width: 1000px;
+  border-radius: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -100,6 +114,7 @@ header a {
   text-align: center;
   min-height: 500px;
   max-width: 1000px;
+  border-radius: 2%;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -160,6 +175,16 @@ header a {
   display: none;
 }
 
+.lni {
+  font-size: 40px;
+  box-shadow: none;
+}
+
+.lni:hover {
+  cursor: pointer;
+  /* color: #FFF; */
+}
+
 .btn-group {
   display: flex;
   margin: 5px auto;
@@ -170,6 +195,7 @@ header a {
 .skills-container {
   position: relative;
   height: 100px;
+  border-radius: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,6 +208,7 @@ header a {
 .skills-container::before {
   content: '';
   position: absolute;
+  border-radius: 2%;
   background-color: lightgreen;
   top: 0px;
   right: 0px;

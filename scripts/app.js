@@ -20,10 +20,10 @@ function init() {
 
   ]
 
-  const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql', '.git']
-  const projTwoSkills = ['.html5', '.javascript', '.css3', '.react', '.express', '.nodejs', '.npm', '.mongodb']
-  const projThreeSkills = ['.html5', '.javascript', '.css3', '.react']
-  const projFourSkills = ['.html5', '.javascript', '.css3']
+  const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql', '.git', '.github']
+  const projTwoSkills = ['.html5', '.javascript', '.css3', '.react', '.express', '.nodejs', '.npm', '.mongodb', '.git', '.github']
+  const projThreeSkills = ['.html5', '.javascript', '.css3', '.react', '.git', '.sass']
+  const projFourSkills = ['.html5', '.javascript', '.css3', '.git']
 
   const getSkillsDiv = document.querySelector('.get-skills')
   const responseContain = document.querySelector('.response-contain')
@@ -65,7 +65,7 @@ function init() {
         icon.classList.remove('skills-hi')
       }
     })
-    if (e.target.value === 'next') {
+    if (e.target.id === 'next') {
       currProjInd = currProjInd === 3 ? 0 : currProjInd + 1
     } else {
       currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
