@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -217,7 +216,7 @@ header a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 800px;
+  width: 850px;
 }
 
 .response-status {
@@ -227,13 +226,9 @@ header a {
 
 i {
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 15%;
   box-shadow: 9px 12px 23px 0px #D3D3D3;
-}
-
-.green-back {
-  background-color: lightgreen;
 }
 
 .display-flex {
@@ -259,13 +254,13 @@ i {
 
 .skills-hi {
   transition: font-size 1s;
-  font-size: 70px;
+  font-size: 60px;
   box-shadow: 9px 12px 23px 0px #5b5b5b;
 }
 
 .skills-off {
   transition: font-size 1s;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 footer {

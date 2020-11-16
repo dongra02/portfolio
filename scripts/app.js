@@ -1,7 +1,7 @@
 function init() {
   console.log('Thanks for checking my Portfolio!')
   
-  // get icns for git, github, node sass, bulma
+  // get icns for git, github, node sass, bulma, SQL, Mongoose, SF, QBs
   const icons = [
     'devicon-html5-plain',
     'devicon-css3-plain',
@@ -13,10 +13,14 @@ function init() {
     'devicon-mongodb-plain',
     'devicon-python-plain',
     'devicon-django-plain',
-    'devicon-postgresql-plain'
+    'devicon-postgresql-plain',
+    'devicon-git-plain',
+    'devicon-github-plain',
+    'devicon-sass-original',
+
   ]
 
-  const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql']
+  const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql', '.git']
   const projTwoSkills = ['.html5', '.javascript', '.css3', '.react', '.express', '.nodejs', '.npm', '.mongodb']
   const projThreeSkills = ['.html5', '.javascript', '.css3', '.react']
   const projFourSkills = ['.html5', '.javascript', '.css3']
@@ -51,8 +55,6 @@ function init() {
     })
   }
 
-  
-
   let currProjInd = 0
 
   const scrollProject = (e) => {
@@ -69,7 +71,6 @@ function init() {
       currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
     }
     projArray[currProjInd].style.display = 'flex'
-
     switch (currProjInd) {
       case 0:
         highlightSkill(projOneSkills)
@@ -108,6 +109,9 @@ function init() {
   const hideResponse = () => {
     respItems.forEach(item => {
       item.classList.add('display-none')
+      if (currProjInd === 0) {
+        highlightSkill(projOneSkills)
+      }
     })
   }
 
@@ -116,7 +120,6 @@ function init() {
     setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
     setTimeout(skillsRespAnimate, 2000)
     setTimeout(hideResponse, 5500)
-    // setTimeout(highlightSkill(projOneSkills), 7000)
   }
 
   const handleSkillsAnimate = (e) => {
