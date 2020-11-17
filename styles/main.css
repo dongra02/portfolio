@@ -51,6 +51,28 @@ header h1 {
   font-size: 40px;
 }
 
+.form-container {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  margin-left: -300px;
+  top: 60px;
+  height: 400px;
+  width: 600px;
+  border-radius: 2%;
+  box-shadow: 9px 12px 23px 0px #D3D3D3;
+  background-color: #E9FBEA;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .bio-container {
   position: relative;
   min-height: 400px;
@@ -240,12 +262,12 @@ header h1 {
   color: #008000;
 }
 
-.skills-response {
-  display: flex;
-}
-
 .response-contain {
   display: none;
+}
+
+.skills-response {
+  display: flex;
 }
 
 .skills-list {

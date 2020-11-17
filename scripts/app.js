@@ -16,7 +16,7 @@ function init() {
     'devicon-postgresql-plain',
     'devicon-git-plain',
     'devicon-github-plain',
-    'devicon-sass-original',
+    'devicon-sass-original'
 
   ]
 
@@ -25,6 +25,7 @@ function init() {
   const projThreeSkills = ['.html5', '.javascript', '.css3', '.react', '.git', '.sass']
   const projFourSkills = ['.html5', '.javascript', '.css3', '.git']
 
+  const mainContain = document.querySelector('.main-container')
   const getSkillsDiv = document.querySelector('.get-skills')
   const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
@@ -35,6 +36,10 @@ function init() {
   const projThree = document.querySelector('.project-3')
   const projFour = document.querySelector('.project-4')
   const projArray = [projOne, projTwo, projThree, projFour]
+  const formContain = document.querySelector('.form-container')
+  const emailBtn = document.querySelector('.email')
+  const sendBtn = document.querySelector('.send')
+  const cancelBtn = document.querySelector('.cancel')
 
   icons.forEach(icon => {
     const iconElement = document.createElement('i')
@@ -127,6 +132,20 @@ function init() {
       skillsAnimate()
     }
   }
+
+  const handleClickEmail = () => {
+    formContain.style.display = 'block'
+    mainContain.style.opacity = '.2'
+  }
+
+  const handleCancelEmail = (e) => {
+    e.preventDefault()
+    formContain.style.display = 'none'
+    mainContain.style.opacity = '1'
+  }
+
+  emailBtn.addEventListener('click', handleClickEmail)
+  cancelBtn.addEventListener('click', handleCancelEmail)
 
   window.addEventListener('scroll', handleSkillsAnimate)
 }
