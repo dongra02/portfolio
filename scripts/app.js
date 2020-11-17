@@ -29,7 +29,7 @@ function init() {
   const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
   const respItems = document.querySelectorAll('.response')
-  const scrollBtns = document.querySelectorAll('.project-scroll')
+  const scrollChevs = document.querySelectorAll('.project-scroll')
   const projOne = document.querySelector('.project-1')
   const projTwo = document.querySelector('.project-2')
   const projThree = document.querySelector('.project-3')
@@ -85,11 +85,11 @@ function init() {
         highlightSkill(projFourSkills)
         break
       default:
-        console.log('Houston we have a problem')
+        console.log('Bummer')
     }
   }
 
-  scrollBtns.forEach(button => button.addEventListener('click', scrollProject))
+  scrollChevs.forEach(chev => chev.addEventListener('click', scrollProject))
 
   const inViewPort = (element) => {
     const elementRect = getSkillsDiv.getBoundingClientRect(element)
