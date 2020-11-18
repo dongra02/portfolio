@@ -395,4 +395,14 @@ footer p {
     display: none;
   }
 
+  .skills-list {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
+  i, .skills-hi, .skills-off {
+    transition: font-size 1s;
+    font-size: 30px;
+    margin: 5px;
+  }
 }
