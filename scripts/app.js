@@ -54,7 +54,7 @@ function init() {
 
   const skillsRespAnimate = () => {
     responseContain.classList.add('skills-in')
-    responseContain.classList.add('display-flex')
+    responseContain.style.display = 'flex'
   }
 
   const highlightSkill = (skillsList) => {
@@ -69,7 +69,7 @@ function init() {
 
   const hideResponse = () => {
     respItems.forEach(item => {
-      item.classList.add('display-none')
+      item.style.display = 'none'
       if (currProjInd === 0) {
         highlightSkill(projOneSkills)
       }
@@ -78,7 +78,7 @@ function init() {
 
   const skillsAnimate = () => {
     getSkillsDiv.classList.add('skills-out')
-    setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
+    setTimeout(() => getSkillsDiv.style.display = 'none', 3000)
     setTimeout(skillsRespAnimate, 2000)
     setTimeout(hideResponse, 5500)
   }
