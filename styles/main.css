@@ -225,13 +225,13 @@ header h1 {
 
 .skills-container {
   position: relative;
-  height: 100px;
+  height: 200px;
   border-radius: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px auto;
-  width: 1000px;
+  max-width: 1000px;
   box-shadow: 9px 12px 23px 0px #D3D3D3;
   overflow: hidden;
 }
@@ -264,17 +264,15 @@ header h1 {
 
 .response-contain {
   display: none;
-}
-
-.skills-response {
-  display: flex;
+  justify-content: space-around;
+  width: 90%;
 }
 
 .skills-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 850px;
+  width: 100%;
 }
 
 i {

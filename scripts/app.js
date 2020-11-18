@@ -108,7 +108,7 @@ function init() {
 
   const skillsRespAnimate = () => {
     responseContain.classList.add('skills-in')
-    responseContain.classList.add('display-block')
+    responseContain.classList.add('display-flex')
   }
 
   const hideResponse = () => {
