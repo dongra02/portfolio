@@ -278,6 +278,7 @@ header h1 {
 
 i {
   color: black;
+  transition: font-size 1s;
   font-size: 30px;
   border-radius: 15%;
   box-shadow: 9px 12px 23px 0px #D3D3D3;
@@ -308,11 +309,6 @@ i {
   transition: font-size 1s;
   font-size: 60px;
   box-shadow: 9px 12px 23px 0px #5b5b5b;
-}
-
-.skills-off {
-  transition: font-size 1s;
-  font-size: 30px;
 }
 
 footer {
@@ -400,7 +396,7 @@ footer p {
     flex-wrap: wrap;
   }
 
-  i, .skills-hi, .skills-off {
+  i, .skills-hi {
     transition: font-size 1s;
     font-size: 30px;
     margin: 5px;
