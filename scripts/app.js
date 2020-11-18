@@ -76,21 +76,23 @@ function init() {
       currProjInd = currProjInd === 0 ? 3 : currProjInd - 1
     }
     projArray[currProjInd].style.display = 'flex'
-    switch (currProjInd) {
-      case 0:
-        highlightSkill(projOneSkills)
-        break
-      case 1:
-        highlightSkill(projTwoSkills)
-        break
-      case 2:
-        highlightSkill(projThreeSkills)
-        break
-      case 3:
-        highlightSkill(projFourSkills)
-        break
-      default:
-        console.log('Bummer')
+    if (window.innerWidth >= 760) {
+      switch (currProjInd) {
+        case 0:
+          highlightSkill(projOneSkills)
+          break
+        case 1:
+          highlightSkill(projTwoSkills)
+          break
+        case 2:
+          highlightSkill(projThreeSkills)
+          break
+        case 3:
+          highlightSkill(projFourSkills)
+          break
+        default:
+          console.log('Bummer')
+      }
     }
   }
 
@@ -128,7 +130,7 @@ function init() {
   }
 
   const handleSkillsAnimate = (e) => {
-    if (inViewPort(e.target)) {
+    if (inViewPort(e.target) && window.innerWidth >= 760) {
       skillsAnimate()
     }
   }

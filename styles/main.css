@@ -106,7 +106,7 @@ header h1 {
 }
 
 .bio-content {
-  max-width: 45%;
+  width: 45%;
   line-height: 1.2rem;
   text-align: center;
 }
@@ -124,7 +124,7 @@ header h1 {
 
 .project-container {
   position: relative;
-  min-height: 500px;
+  min-height: 450px;
   max-width: 1000px;
   border-radius: 2%;
   display: flex;
@@ -141,10 +141,10 @@ header h1 {
   font-size: 180px;
   color: darkgreen;
   background-color: lightgreen;
-  line-height: 2.7em;
+  line-height: 2.4em;
   min-height: 400px;
   text-align: center;
-  min-height: 500px;
+  min-height: 450px;
   max-width: 1000px;
   border-radius: 2%;
   top: 0px;
@@ -352,4 +352,47 @@ footer p {
   100% {
     margin-left: 0%;
   }
+}
+
+@media only screen and (max-width: 760px) {
+
+  header {
+    display: block;
+    line-height: 1.5em;
+    text-align: center;
+    animation: none;
+    height: 100px;
+  }
+
+  .bio-container {
+    margin-top: 120px;
+  }
+
+  .bio-container::before, .project-container::before {
+    /* content: ''; */
+    line-height: 1.2em;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .bio-img-contain, .project-img-contain {
+    display: none;
+  }
+
+  .bio-content, .project-content {
+    width: 90%;
+  }
+
+  .get-skills {
+    display: none;
+  }
+
+  .response-contain {
+    display: flex;
+  }
+
+  .response {
+    display: none;
+  }
+
 }
