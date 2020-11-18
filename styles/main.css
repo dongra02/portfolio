@@ -360,10 +360,10 @@ footer p {
   }
 
   .bio-container {
-    margin-top: 120px;
+    margin-top: 60px;
   }
 
-  .bio-container::before, .project-container::before {
+  .bio-container::before, .skills-container::before, .project-container::before {
     line-height: 1.2em;
     font-size: 30px;
     text-align: left;
@@ -375,6 +375,11 @@ footer p {
 
   .bio-content, .project-content {
     width: 90%;
+  }
+
+  .skills-container::before {
+    content: 'SKILLS';
+    color: darkgreen;
   }
 
   .get-skills {
