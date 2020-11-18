@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  width: 100vw;
 }
 
 a {
@@ -316,6 +317,7 @@ i {
 
 footer {
   height: 20px;
+  width: 100%;
   line-height: 100%;
   background-color: #000;
   color: #FFF;
