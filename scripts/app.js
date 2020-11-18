@@ -1,7 +1,6 @@
 function init() {
   console.log('Thanks for checking my Portfolio!')
   
-  // get icns for git, github, node sass, bulma, SQL, Mongoose, SF, QBs
   const icons = [
     'devicon-html5-plain',
     'devicon-css3-plain',
@@ -17,7 +16,6 @@ function init() {
     'devicon-git-plain',
     'devicon-github-plain',
     'devicon-sass-original'
-
   ]
 
   const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql', '.git', '.github']
@@ -37,9 +35,9 @@ function init() {
   const projFour = document.querySelector('.project-4')
   const projArray = [projOne, projTwo, projThree, projFour]
   const formContain = document.querySelector('.form-container')
-  const emailBtn = document.querySelector('.email')
-  const sendBtn = document.querySelector('.send')
-  const cancelBtn = document.querySelector('.cancel')
+  // const emailBtn = document.querySelector('.email')
+  // const sendBtn = document.querySelector('.send')
+  // const cancelBtn = document.querySelector('.cancel')
 
   icons.forEach(icon => {
     const iconElement = document.createElement('i')
@@ -128,10 +126,9 @@ function init() {
   }
 
   const handleSkillsAnimate = (e) => {
-    if (inViewPort(e.target) && window.innerWidth >= 760) {
+    if (inViewPort(e.target) && window.innerWidth >= 769) {
       skillsAnimate()
-    }
-    else {
+    } else if (inViewPort(e.target) && window.innerWidth < 769) {
       highlightSkill(projOneSkills)
     }
   }
@@ -147,8 +144,8 @@ function init() {
     mainContain.style.opacity = '1'
   }
 
-  emailBtn.addEventListener('click', handleClickEmail)
-  cancelBtn.addEventListener('click', handleCancelEmail)
+  // emailBtn.addEventListener('click', handleClickEmail)
+  // cancelBtn.addEventListener('click', handleCancelEmail)
 
   window.addEventListener('scroll', handleSkillsAnimate)
 }
