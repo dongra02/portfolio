@@ -23,7 +23,6 @@ function init() {
   const projThreeSkills = ['.html5', '.javascript', '.css3', '.react', '.git', '.sass']
   const projFourSkills = ['.html5', '.javascript', '.css3', '.git']
 
-  const mainContain = document.querySelector('.main-container')
   const getSkillsDiv = document.querySelector('.get-skills')
   const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
@@ -33,12 +32,9 @@ function init() {
   const projTwo = document.querySelector('.project-2')
   const projThree = document.querySelector('.project-3')
   const projFour = document.querySelector('.project-4')
+  
   const projArray = [projOne, projTwo, projThree, projFour]
-  const formContain = document.querySelector('.form-container')
-  // const emailBtn = document.querySelector('.email')
-  // const sendBtn = document.querySelector('.send')
-  // const cancelBtn = document.querySelector('.cancel')
-
+  
   icons.forEach(icon => {
     const iconElement = document.createElement('i')
     iconElement.classList.add(icon)
@@ -46,7 +42,20 @@ function init() {
     skillsDiv.appendChild(iconElement)
   })
 
-  const allIcons = document.querySelectorAll('i')
+  const inViewPort = (element) => {
+    const elementRect = getSkillsDiv.getBoundingClientRect(element)
+    return (
+      elementRect.top >= 0 &&
+      elementRect.left >= 0 &&
+      elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      elementRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  }
+
+  const skillsRespAnimate = () => {
+    responseContain.classList.add('skills-in')
+    responseContain.classList.add('display-flex')
+  }
 
   const highlightSkill = (skillsList) => {
     skillsList.forEach(skill => {
@@ -57,6 +66,32 @@ function init() {
       }
     })
   }
+
+  const hideResponse = () => {
+    respItems.forEach(item => {
+      item.classList.add('display-none')
+      if (currProjInd === 0) {
+        highlightSkill(projOneSkills)
+      }
+    })
+  }
+
+  const skillsAnimate = () => {
+    getSkillsDiv.classList.add('skills-out')
+    setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
+    setTimeout(skillsRespAnimate, 2000)
+    setTimeout(hideResponse, 5500)
+  }
+
+  const handleSkillsAnimate = (e) => {
+    if (inViewPort(e.target) && window.innerWidth >= 769) {
+      skillsAnimate()
+    } else if (inViewPort(e.target) && window.innerWidth < 769) {
+      highlightSkill(projOneSkills)
+    }
+  }
+
+  const allIcons = document.querySelectorAll('i')
 
   let currProjInd = 0
 
@@ -92,61 +127,30 @@ function init() {
     }
   }
 
-  scrollChevs.forEach(chev => chev.addEventListener('click', scrollProject))
+  // UNCOMMENT CODE BELOW IF ENABLING EMAIL FORM vs LINK, ADJUST index.html
 
-  const inViewPort = (element) => {
-    const elementRect = getSkillsDiv.getBoundingClientRect(element)
-    return (
-      elementRect.top >= 0 &&
-      elementRect.left >= 0 &&
-      elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      elementRect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    )
-  }
+  // const mainContain = document.querySelector('.main-container')
+  // const formContain = document.querySelector('.form-container')
 
-  const skillsRespAnimate = () => {
-    responseContain.classList.add('skills-in')
-    responseContain.classList.add('display-flex')
-  }
+  // const handleClickEmail = () => {
+  //   formContain.style.display = 'block'
+  //   mainContain.style.opacity = '.2'
+  // }
 
-  const hideResponse = () => {
-    respItems.forEach(item => {
-      item.classList.add('display-none')
-      if (currProjInd === 0) {
-        highlightSkill(projOneSkills)
-      }
-    })
-  }
-
-  const skillsAnimate = () => {
-    getSkillsDiv.classList.add('skills-out')
-    setTimeout(() => getSkillsDiv.classList.add('display-none'), 3000)
-    setTimeout(skillsRespAnimate, 2000)
-    setTimeout(hideResponse, 5500)
-  }
-
-  const handleSkillsAnimate = (e) => {
-    if (inViewPort(e.target) && window.innerWidth >= 769) {
-      skillsAnimate()
-    } else if (inViewPort(e.target) && window.innerWidth < 769) {
-      highlightSkill(projOneSkills)
-    }
-  }
-
-  const handleClickEmail = () => {
-    formContain.style.display = 'block'
-    mainContain.style.opacity = '.2'
-  }
-
-  const handleCancelEmail = (e) => {
-    e.preventDefault()
-    formContain.style.display = 'none'
-    mainContain.style.opacity = '1'
-  }
+  // const handleCancelEmail = (e) => {
+  //   e.preventDefault()
+  //   formContain.style.display = 'none'
+  //   mainContain.style.opacity = '1'
+  // }
+  
+  // const emailBtn = document.querySelector('.email')
+  // const sendBtn = document.querySelector('.send')
+  // const cancelBtn = document.querySelector('.cancel')
 
   // emailBtn.addEventListener('click', handleClickEmail)
   // cancelBtn.addEventListener('click', handleCancelEmail)
 
+  scrollChevs.forEach(chev => chev.addEventListener('click', scrollProject))
   window.addEventListener('scroll', handleSkillsAnimate)
 }
 
