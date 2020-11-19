@@ -402,11 +402,6 @@ footer p {
     width: 90%;
   }
 
-  .skills-container::before {
-    content: 'SKILLS';
-    color: darkgreen;
-  }
-
   .get-skills {
     display: none;
   }
