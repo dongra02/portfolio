@@ -87,7 +87,6 @@ function init() {
     if (inViewPort(e.target) && window.innerWidth >= 769) {
       skillsAnimate()
     } else if (inViewPort(e.target) && window.innerWidth < 769 && currProjInd === 0) {
-      console.log('here is the issue')
       highlightSkill(projOneSkills)
     }
   }
