@@ -321,7 +321,7 @@ i {
 .skills-hi {
   transition: font-size 1s;
   font-size: 60px;
-  box-shadow: 9px 12px 23px 0px #5b5b5b;
+  box-shadow: 9px 12px 23px 0px #282828;
 }
 
 footer {
