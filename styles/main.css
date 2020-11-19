@@ -141,14 +141,14 @@ header h1 {
 
 .bio-img {
   height: 100%;
-  border-radius: 10%;
+  border-radius: 50%;
   box-shadow: 9px 12px 23px 0px #D3D3D3;
 }
 
 
 .skills-container {
   position: relative;
-  height: 140px;
+  height: 120px;
   border-radius: 2%;
   display: flex;
   justify-content: center;
@@ -321,7 +321,7 @@ i {
 .skills-hi {
   transition: font-size 1s;
   font-size: 60px;
-  box-shadow: 9px 12px 23px 0px #282828;
+  box-shadow: 9px 12px 16px 0px #282828;
 }
 
 footer {
