@@ -209,14 +209,13 @@ i {
 
 .project-container {
   position: relative;
-  min-height: 450px;
+  min-height: 340px;
   max-width: 1000px;
   border-radius: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 10px auto 30px;
-  padding: 10px;
   /* box-shadow: 9px 12px 23px 0px #D3D3D3; */
 }
 
