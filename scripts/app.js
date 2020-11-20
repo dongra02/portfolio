@@ -13,9 +13,9 @@ function init() {
     'devicon-python-plain-wordmark',
     'devicon-django-plain',
     'devicon-postgresql-plain-wordmark',
-    'devicon-git-plain-wordmark',
     'devicon-github-plain-wordmark',
-    'devicon-sass-original'
+    'devicon-sass-original',
+    'devicon-git-plain-wordmark'
   ]
 
   const projOneSkills = ['.html5', '.javascript', '.css3', '.react', '.npm', '.python', '.django', '.postgresql', '.git', '.github']
@@ -78,7 +78,7 @@ function init() {
 
   const skillsAnimate = () => {
     getSkillsDiv.classList.add('skills-out')
-    setTimeout(() => getSkillsDiv.style.display = 'none', 3000)
+    setTimeout(() => getSkillsDiv.style.display = 'none', 2000)
     setTimeout(skillsRespAnimate, 2000)
     setTimeout(hideResponse, 5500)
   }

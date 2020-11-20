@@ -129,24 +129,31 @@ header h1 {
 
 .skills-container {
   position: relative;
-  height: 140px;
+  height: 160px;
   border-radius: 2%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin: 10px auto;
-  max-width: 1000px;
+  max-width: 1200px;
   overflow: hidden;
   padding: 10px;
 }
 
 .get-skills {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-family: 'Inconsolata', monospace;
   font-size: 20px;
   font-weight: 700;
   color: #0000FF;
+}
+
+.response {
+  font-size: 34px;
+  color: rgb(32, 110, 32);
+  font-weight: 700;
 }
 
 .skill-link {
@@ -172,7 +179,6 @@ i {
   font-size: 36px;
   border-radius: 15%;
   padding: 3px;
-  /* box-shadow: 9px 12px 23px 0px #D3D3D3; */
 }
 
 
@@ -270,7 +276,6 @@ i {
   font-size: 64px;
   color: rgb(32, 110, 32);
   border: 1px solid rgb(32, 110, 32);
-  /* box-shadow: 7px 9px 6px 0px rgb(31, 101, 31); */
 }
 
 footer {
@@ -351,12 +356,17 @@ footer p {
     display: flex;
   }
 
+  .skills-container {
+    overflow: visible;
+    min-height: 160px;
+  }
+
   .response {
     display: none;
   }
 
   .skills-list {
-    width: 70%;
+    width: 85%;
     flex-wrap: wrap;
   }
 
