@@ -98,7 +98,6 @@ header h1 {
 } */
 
 .bio-container {
-  position: relative;
   min-height: 400px;
   display: flex;
   max-width: 1000px;
@@ -128,7 +127,6 @@ header h1 {
 
 
 .skills-container {
-  position: relative;
   height: 160px;
   border-radius: 2%;
   display: flex;
@@ -183,7 +181,6 @@ i {
 
 
 .project-container {
-  position: relative;
   min-height: 340px;
   max-width: 1000px;
   border-radius: 2%;
