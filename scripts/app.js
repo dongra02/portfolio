@@ -2,19 +2,19 @@ function init() {
   console.log('Thanks for checking my Portfolio!')
   
   const icons = [
-    'devicon-html5-plain',
-    'devicon-css3-plain',
+    'devicon-html5-plain-wordmark',
+    'devicon-css3-plain-wordmark',
     'devicon-javascript-plain',
-    'devicon-react-original',
+    'devicon-react-original-wordmark',
     'devicon-express-original',
     'devicon-nodejs-plain',
     'devicon-npm-original-wordmark',
-    'devicon-mongodb-plain',
-    'devicon-python-plain',
+    'devicon-mongodb-plain-wordmark',
+    'devicon-python-plain-wordmark',
     'devicon-django-plain',
-    'devicon-postgresql-plain',
-    'devicon-git-plain',
-    'devicon-github-plain',
+    'devicon-postgresql-plain-wordmark',
+    'devicon-git-plain-wordmark',
+    'devicon-github-plain-wordmark',
     'devicon-sass-original'
   ]
 

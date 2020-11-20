@@ -169,9 +169,10 @@ header h1 {
 i {
   color: black;
   transition: font-size 1s;
-  font-size: 30px;
+  font-size: 36px;
   border-radius: 15%;
-  box-shadow: 9px 12px 23px 0px #D3D3D3;
+  padding: 3px;
+  /* box-shadow: 9px 12px 23px 0px #D3D3D3; */
 }
 
 
@@ -261,14 +262,15 @@ i {
 
 .skills-out {
   transition: font-size 2s;
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .skills-hi {
   transition: font-size 1s;
-  font-size: 60px;
-  /* color: rgb(38, 130, 38); */
-  box-shadow: 7px 9px 6px 0px rgb(31, 101, 31);
+  font-size: 64px;
+  color: rgb(32, 110, 32);
+  border: 1px solid rgb(32, 110, 32);
+  /* box-shadow: 7px 9px 6px 0px rgb(31, 101, 31); */
 }
 
 footer {
@@ -360,7 +362,7 @@ footer p {
 
   i, .skills-hi {
     transition: font-size 1s;
-    font-size: 30px;
+    font-size: 36px;
     margin: 5px;
   }
 }
