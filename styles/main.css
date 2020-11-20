@@ -323,9 +323,9 @@ footer p {
 @media only screen and (max-width: 768px) {
 
   header {
-    display: block;
-    line-height: 1.5em;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1em;
     animation: none;
     height: 100px;
   }
