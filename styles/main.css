@@ -340,8 +340,8 @@ footer p {
     height: 100px;
   }
 
-  .bio-container {
-    margin-top: 100px;
+  .bio-title {
+    margin-top: 120px;
   }
 
   .bio-container::before, .skills-container::before, .project-container::before {
@@ -384,5 +384,9 @@ footer p {
     transition: font-size 1s;
     font-size: 36px;
     margin: 5px;
+  }
+
+  .project-container {
+    min-height: auto;
   }
 }
