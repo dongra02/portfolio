@@ -13,7 +13,7 @@ function init() {
     'devicon-python-plain-wordmark',
     'devicon-django-plain',
     'devicon-postgresql-plain-wordmark',
-    'devicon-github-plain-wordmark',
+    // 'devicon-github-plain-wordmark',
     'devicon-sass-original',
     'devicon-git-plain-wordmark'
   ]
@@ -27,6 +27,7 @@ function init() {
   const responseContain = document.querySelector('.response-contain')
   const skillsDiv = document.querySelector('.skills-list')
   const respItems = document.querySelectorAll('.response')
+  console.log(respItems)
   const scrollChevs = document.querySelectorAll('.project-scroll')
   const projOne = document.querySelector('.project-1')
   const projTwo = document.querySelector('.project-2')
@@ -69,11 +70,12 @@ function init() {
 
   const hideResponse = () => {
     respItems.forEach(item => {
+      console.log(item)
       item.style.display = 'none'
-      if (currProjInd === 0) {
-        highlightSkill(projOneSkills)
-      }
     })
+    if (currProjInd === 0) {
+      highlightSkill(projOneSkills)
+    }
   }
 
   const skillsAnimate = () => {
