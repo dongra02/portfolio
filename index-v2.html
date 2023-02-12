@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main-v2.css">
-  <script src="scripts/app.js" charset="utf-8"></script>
+  <script src="scripts/main-v2.js" charset="utf-8"></script>
   <title>Don Graham</title>
 </head>
 <body>
@@ -25,41 +25,72 @@
       <!-- </div> -->
     <!-- </header> -->
     <section class='main-container'>
-        <div class="sub-nav-div">
-            <div class="brand-div">
-                <h1 class='brand'>
-                    DG
-                </h1>
+        <div class="brand-div">
+            <div class='brand hide' id="logo">
+                DG
             </div>
+            <div class="brand hide" id="about-desc">
+                ... the Person
+            </div>
+            <div class="brand hide" id="skills-desc">
+                ... the Developer
+            </div>
+            <div class="brand hide" id="experience-desc">
+                ... the Employee
+            </div>
+        </div>
+        <div class="sub-nav-div">
             <ul class="sub-nav">
                 <!-- make these icons with over over text-->
-                <li class='sub-nav-item'>
+                <li class='sub-nav-item' data-display='about'>
                     About
                 </li>
-                <li class='sub-nav-item'>
+                <li class='sub-nav-item' data-display='skills'>
                     Skills
                 </li>
-                <li class='sub-nav-item'>
+                <li class='sub-nav-item' data-display='experience'>
                     Experience
                 </li>
             </ul>
         </div>
-        <div class="bio-div">
-            <div class='bio-container'>
-                <p>
-                    Hello, I'm
-                </p>
-                <p class="name">
-                    Don Graham.
-                </p>
-                <p>
-                    A <span class="role"> web developer</span> based in Brazil.
-                </p>
-            </div>
+        <div class="content-div" id="home-div">
+            <p>
+                Hello, I'm
+            </p>
+            <p class="name">
+                Don Graham.
+            </p>
+            <p>
+                A <span class="role"> web developer</span> based in Brazil.
+            </p>
+        </div>
+        <div class="content-div hide" id="about-div">
+            <p>
+                I am a web developer currently working on the team at <a href="https://movingworlds.org" target="_blank">MovingWorlds</a>, an amazing group of people working to support social enterprises all over the world. My role is to maintain and implement new features in our platform, CRM as well as integrating our various internal and external tools. Additionally, I provide support to team members and users. It's incredibly rewarding to feel challenged each day while contributing to the this work.
+            </p>
+            <p>
+                My family and I are based in Minas Gereis, Brazil where we try to maintain our sanity by spending time outside exploring our new city as well as the beautiful landscape surrounding us. As animal lovers, we seem to have a consistant rotation of strays and street dogs with less than perfect track record in 'fostering'. Our two permanent pups are evidence.
+            </p>
+        </div>
+        <div class="content-div hide" id="skills-div">
+            <p>
+                This will ber a bunch of skills icons maybe?
+            </p>
+            <p>
+                more skills, some icons, maybe some corny animations
+            </p>
+        </div>
+        <div class="content-div hide" id="experience-div">
+            <p>
+                This will be a my resume in a nicer layout
+            </p>
+            <p>
+                experience
+            </p>
         </div>
   </section>
   <footer>
-    <p>thrown together by Don Graham himself</p>
+    <p>thrown together by Don Graham</p>
   </footer>
 </body>
 </html>
