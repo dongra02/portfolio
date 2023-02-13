@@ -20,6 +20,74 @@ body {
     align-items: center;
 }
 
+.lineUp1 {
+    opacity: 0;
+    animation: 2.5s anim-lineUp forwards;
+
+}
+
+.lineUp2 {
+    opacity: 0;
+    animation: 2.5s anim-lineUp 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.lineUp3 {
+    opacity: 0;
+    animation: 2s anim-lineUp 2s forwards;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.lineDown1 {
+    opacity: 0;
+    animation: .75s anim-lineDown 3s forwards;
+}
+
+.lineDown2 {
+    opacity: 0;
+    animation: .75s anim-lineDown 3.25s forwards;
+}
+
+.lineDown3 {
+    opacity: 0;
+    animation: .75s anim-lineDown 3.5s forwards;
+}
+
+@keyframes anim-lineDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    20% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 .brand-div {
     position: absolute;
     top: 0px;
